@@ -1,6 +1,6 @@
 import React from "react";
 
-const PersonForm = ({ handleSubmit, updateNewPerson }) => (
+const PersonForm = ({ handleSubmit, newPerson, updateNewPerson }) => (
   <form onSubmit={(e) => handleSubmit(e)}>
     <div>
       name:{" "}
@@ -8,6 +8,7 @@ const PersonForm = ({ handleSubmit, updateNewPerson }) => (
         onChange={(e) =>
           updateNewPerson({ name: "name", value: e.target.value })
         }
+        value={newPerson.name}
       />
     </div>
     <div>
@@ -16,6 +17,7 @@ const PersonForm = ({ handleSubmit, updateNewPerson }) => (
         onChange={(e) =>
           updateNewPerson({ name: "number", value: e.target.value })
         }
+        value={newPerson.number}
       />
     </div>
     <div>
